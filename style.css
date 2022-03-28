@@ -78,14 +78,25 @@ a {
 }
 
 ul {
-  list-style: none;
   padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 /* navbar */
 #navbar {
   display: flex;
   justify-content: space-between;
+  /* 영역들을 사이 기준으로 띄움 */
   background-color: var(--color-pink);
   align-items: center;
   color: var(--color-white);
@@ -115,4 +126,36 @@ ul {
 
 .navbar__menu__item:hover {
   background-color: var(--color-dark-pink);
+}
+
+/* Home */
+#home {
+  background: url(image/bg.webp) center/cover no-repeat;
+  /* 이미지를 가운데에 전체 커버, 반복 없음 */
+  padding: 40px;
+  text-align: center;
+}
+
+.home__avatar {
+  width: 200px;
+  height: 350px;
+  border-radius: var(--size-border-radius);
+  /* 둥글게 만드려면 */
+  /* border-radius: 50%; */
+  border: 2px solid var(--color-light-white);
+}
+
+.home__title,
+.home__description {
+  color: var(--color-white);
+}
+
+.home__contact {
+  color: var(--color-white);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
 }
