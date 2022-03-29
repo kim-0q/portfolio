@@ -167,6 +167,10 @@ button {
 section {
   padding: 50px;
   text-align: center;
+  margin: auto;
+}
+
+.section__container {
   max-width: 1200px;
   margin: auto;
 }
@@ -231,4 +235,61 @@ section {
 .logo {
   width: 70px;
   height: 70px;
+}
+
+/* Skill */
+#skills {
+  background-color: var(--color-yellow);
+}
+
+.skillset {
+  display: flex;
+  background-color: var(--color-light-grey);
+  color: var(--color-light-white);
+  margin: 20px 0;
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* flex-basis: flex에서 기본적인 공간 할당 */
+.skillset__left {
+  flex-basis: 60%;
+  background-color: var(--color-dark-grey);
+  padding: 20px 40px;
+}
+
+.skill__bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-grey);
+}
+
+/* 수치는 각각 다르기 때문에 HTML에서 설정 */
+.skill__value {
+  height: 3px;
+  background-color: var(--color-orange);
+}
+
+.skillset__title {
+  color: var(--color-white);
+}
+
+.skillset__right {
+  flex-basis: 40%;
+}
+
+.tools {
+  background-color: var(--color-grey);
+}
+
+.skill {
+  margin-bottom: 16px;
+}
+
+.tools,
+.etc {
+  padding: 20px;
 }
