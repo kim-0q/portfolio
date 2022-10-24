@@ -97,13 +97,22 @@ button {
 
 /* navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
   /* 영역들을 사이 기준으로 띄움 */
-  background-color: var(--color-pink);
+  justify-content: space-between;
+  background-color: transparent;
+  /* 위 아래 공간 배치법 stretch, start, end 등 */
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--dark{
+  background-color: var(--color-pink);
+  padding: 8px;
 }
 
 .navbar__logo {
@@ -132,6 +141,7 @@ button {
 }
 
 .navbar__toggle-btn {
+  /* 부모중 static 아닌 부모 찾고 거기서 기준, html요소에서 독립됨 */
   position: absolute;
   top: 24px;
   right: 32px;
@@ -142,9 +152,10 @@ button {
 
 /* Home */
 #home {
-  background: url(image/bg.webp) center/cover no-repeat;
   /* 이미지를 가운데에 전체 커버, 반복 없음 */
+  background: url(image/bg.webp) center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 
@@ -180,12 +191,14 @@ section {
 }
 
 .section__container {
+  /* 긴 화면 썼을 때 늘어지지 않도록 */
   max-width: 1200px;
   margin: auto;
 }
 
 /* About */
 .about__majors {
+  /* "안에 있는" 요소를 flex로 */
   display: flex;
   justify-content: space-between;
   margin: 80px 0;
@@ -208,6 +221,7 @@ section {
   color: darkgray;
 }
 
+/* major__icon 호버 시 i 태그 수정 */
 .major__icon:hover i {
   color: green;
   transform: rotate(-30deg) scale(1.1);
@@ -276,7 +290,7 @@ section {
   background-color: var(--color-grey);
 }
 
-/* 수치는 각각 다르기 때문에 HTML에서 설정 */
+/* 수치는 각각 다르기 때문에 HTML에서 설정, %로 width 설정 가능 */
 .skill__value {
   height: 3px;
   background-color: var(--color-orange);
