@@ -491,6 +491,28 @@ section {
   transition: all var(--animation-duration) ease-in;
 }
 
+/* scroll */
+.arrow-up{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  background-color: var(--color-pink);
+  color: white;
+  border-radius: 50%;
+  opacity: 0;
+  /* 커서 안눌리게 */
+  pointer-events: none;
+  transition: all 200ms ease-in;
+}
+
+.arrow-up.visible{
+  opacity: 1;
+  pointer-events: auto;
+}
+
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
     display: block;
