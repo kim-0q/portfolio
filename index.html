@@ -195,28 +195,38 @@
         <h1>My Work</h1>
         <h3>projects</h3>
         <div class="work__categories">
-          <button class="categories__btn">
+          <button class="categories__btn active" data-filter="*">
             All <span class="categories__count"> 8</span>
           </button>
-          <button class="categories__btn">
+          <button class="categories__btn" data-filter="front-end">
             Front-end <span class="categories__count"> 3</span>
           </button>
-          <button class="categories__btn">
+          <button class="categories__btn" data-filter="back-end">
             Back-end <span class="categories__count"> 5</span>
           </button>
-          <button class="categories__btn">
+          <button class="categories__btn" data-filter="mobile">
             Mobile <span class="categories__count"> 2</span>
           </button>
         </div>
-        <div class="work_projects">
-          <a href="https://github.com/" class="project" target="blank">
-            <img src="image/navbar.webp" alt="Front-end" class="project__img" />
+        <div class="work__projects">
+          <a
+            href="https://github.com/"
+            class="project"
+            target="blank"
+            data-type="front-end"
+          >
+            <img src="image/navbar.webp" alt="front-end" class="project__img" />
             <div class="project__description">
               <h3>Front-end github</h3>
               <span>clone coding</span>
             </div>
           </a>
-          <a href="https://github.com/" class="project" target="blank">
+          <a
+            href="https://github.com/"
+            class="project"
+            target="blank"
+            data-type="mobile"
+          >
             <img src="image/navbar.webp" alt="Front-end" class="project__img" />
             <div class="project__description">
               <h3>Front-end github</h3>

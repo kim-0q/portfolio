@@ -359,7 +359,7 @@ section {
   top: 0;
 }
 
-.work_projects {
+.work__projects {
   display: flex;
   /* 자동 줄바꿈 */
   flex-wrap: wrap;
@@ -375,6 +375,10 @@ section {
   height: 250px;
   margin: 10px;
   background-color: var(--color-light-white);
+}
+
+.project.invisible{
+  display: none;
 }
 
 .project__img {
